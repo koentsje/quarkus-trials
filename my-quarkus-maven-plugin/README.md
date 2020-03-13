@@ -1,6 +1,6 @@
 # Generate Panache Entities Maven Plugin
 
-This [Maven](http://maven.apache.org/) plugin allows you to generate Panache entities from an existing databaase.
+This [Maven](http://maven.apache.org/) plugin allows you to generate Panache entities from an existing database.
 
 ## Usage
 
