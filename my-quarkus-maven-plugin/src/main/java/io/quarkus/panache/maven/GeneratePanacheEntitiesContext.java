@@ -16,6 +16,9 @@ public class GeneratePanacheEntitiesContext implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private File buildDir = null;
+	private File outputDir = null;
+	private String packageName = null;
+	private String revengFile = null;
 	private Properties properties = new Properties();
 	
 	public File getBuildDir() {
@@ -24,6 +27,30 @@ public class GeneratePanacheEntitiesContext implements Serializable {
 	
 	public void setBuildDir(File buildDir) {
 		this.buildDir = buildDir;
+	}
+	
+	public File getOutputDir() {
+		return outputDir;
+	}
+	
+	public void setOutputDir(File outputDir) {
+		this.outputDir = outputDir;
+	}
+	
+	public String getPackageName() {
+		return packageName;
+	}
+	
+	public void setPackageName(String packageName) {
+		this.packageName = packageName;
+	}
+	
+	public String getRevengFile() {
+		return revengFile;
+	}
+	
+	public void setRevengFile(String revengFile) {
+		this.revengFile = revengFile;
 	}
 	
 	public Properties getProperties() {

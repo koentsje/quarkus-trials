@@ -50,14 +50,17 @@ import io.smallrye.config.SmallRyeConfig;
 @Mojo(name = "generate-panache-entities", defaultPhase = LifecyclePhase.GENERATE_SOURCES)
 public class GeneratePanacheEntitiesMojo extends AbstractMojo {
 
-    @Parameter(readonly = true, required = true, defaultValue = "${project.build.outputDirectory}") 
-    private File outputDirectory;
-
     @Parameter(defaultValue = "${project}", readonly = true, required = true)
     private MavenProject project;
 
     @Parameter(defaultValue = "${project.build.directory}") 
     private File buildDir;
+
+    @Parameter(defaultValue = "${project.build.directory}/generatedClasses") 
+    private File outputDir;
+
+    @Parameter 
+    private String packageName = null;
 
     @Parameter(defaultValue = "${session}")
     private MavenSession session;
@@ -124,6 +127,9 @@ public class GeneratePanacheEntitiesMojo extends AbstractMojo {
     private GeneratePanacheEntitiesContext createContext() {
         final GeneratePanacheEntitiesContext context = new GeneratePanacheEntitiesContext();
         context.setBuildDir(buildDir);
+        context.setOutputDir(outputDir);
+        context.setPackageName(resolvePackageName());
+        context.setRevengFile(getRevengFilePath());
         context.getProperties().putAll(getGeneratorProperties());
         return context;
     }
@@ -240,5 +246,31 @@ public class GeneratePanacheEntitiesMojo extends AbstractMojo {
     		throw new RuntimeException(e);
     	}
     }
+    
+    private String resolvePackageName() {
+    	String result = packageName;
+    	if (result == null) {
+    		result = project.getGroupId() + "." + project.getArtifactId();
+    	}
+    	return result;
+    }
+    
+    private String getRevengFilePath() {
+    	try {
+	    	for (Resource resource : project.getBuild().getResources()) {
+	    		Path revengFilePath = Paths
+	    				.get(resource.getDirectory())
+	    				.resolve("panache.reveng.xml");
+	    		if (Files.exists(revengFilePath)) {
+	    			return revengFilePath.toFile().getAbsolutePath();
+	    		}
+	    	}
+	    	return null;
+    	} catch (Exception e) {
+    		throw new RuntimeException(e);
+    	}
+    }
+    
+
 
 }
