@@ -47,7 +47,7 @@ public class GeneratePanacheEntitiesOperation implements
                         true);
     }
     
-    public ReverseEngineeringStrategy setupReverseEngineeringStrategy(
+    private ReverseEngineeringStrategy setupReverseEngineeringStrategy(
     		GeneratePanacheEntitiesContext context) {
         try {
 	        String revengStrategy = "org.hibernate.cfg.reveng.DefaultReverseEngineeringStrategy";
