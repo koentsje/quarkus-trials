@@ -1,26 +1,10 @@
-# Panache Entities Reveng Maven Plugin
-
-## Introduction
+# Generate Panache Entities Maven Plugin
 
 This [Maven](http://maven.apache.org/) plugin allows you to generate Panache entities from an existing databaase.
 
-## Build the plugin
+## Basic Usage
 
-If you want to try out this plugin, you will need to build it first as it is not yet published. You can do this in a simple way by first cloning this repository: Issue `git clone https://github.com/koentsje/quarkus-trials`.in your favorite command line tool.
-
-```
-foo@bar ~ % git clone https://github.com/koentsje/quarkus-trials
-Cloning into 'quarkus-trials'...
-remote: Enumerating objects: 102, done.
-remote: Counting objects: 100% (102/102), done.
-remote: Compressing objects: 100% (53/53), done.
-remote: Total 102 (delta 15), reused 95 (delta 10), pack-reused 0
-Receiving objects: 100% (102/102), 79.20 KiB | 33.00 KiB/s, done.
-Resolving deltas: 100% (15/15), done.
-foo@bar ~ %
-```
-
-Then you change the directory to the root folder of the plugin project:  
+An example `pom.xml` file that uses the Maven plugin is found below.
 
 ```
 <?xml version="1.0"?>
@@ -112,7 +96,7 @@ quarkus.datasource.password =
 
 As you know this file resides by default in the `src/main/resources` folder of your project. An example layout of your project is shown in the image below.
 
-![project-layout](docs/images/project-layout.png)
+![project-layout](images/project-layout.png)
 
 Issuing `mvn clean generate-sources` will generate the file `Foo.java`. The default generation folder is `target/generatedClasses` and the default package name is the concatenation of the groupId and the artifactId of your Maven application (in this case `org.foo.bar`). The generated file is shown below:
 
