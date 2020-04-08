@@ -104,6 +104,7 @@ public class GeneratePanacheEntitiesMojo extends AbstractMojo {
     }
     
     private File createGeneratePanacheEntitiesJarFile() throws Exception {
+    	buildDir.mkdirs();
         File result = new File(buildDir, "generate-panache-entities.jar");
         result.delete();
         result.deleteOnExit();
