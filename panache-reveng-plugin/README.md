@@ -27,7 +27,7 @@ foo@bar ~ % cd quarkus-trials/panache-reveng-plugin
 foo@bar panache-reveng-plugin %
 ```
 
-Now you are ready to build the plugin. Issuing `mvn clean insttall` will start the build and when finished install the built plugin into your local Maven repository.
+Now you are ready to build the plugin. Issuing `mvn clean install` will start the build and when finished install the built plugin into your local Maven repository.
 
 ```
 foo@bar panache-reveng-plugin % mvn clean install
