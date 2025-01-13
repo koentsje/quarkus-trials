@@ -7,7 +7,7 @@
     <parent>
         <groupId>io.quarkiverse.clitest</groupId>
         <artifactId>cli-tests-parent</artifactId>
-        <version>999-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>cli-tests-cli</artifactId>
     <name>CLI Tests - CLI</name>
