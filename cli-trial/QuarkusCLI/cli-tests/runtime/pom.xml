@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>io.quarkiverse.custom</groupId>
-        <artifactId>quarkus-custom-parent</artifactId>
+        <groupId>io.quarkiverse.clitest</groupId>
+        <artifactId>cli-tests-parent</artifactId>
         <version>999-SNAPSHOT</version>
     </parent>
-    <artifactId>quarkus-custom</artifactId>
-    <name>Quarkus Custom - Runtime</name>
+    <artifactId>cli-tests-runtime</artifactId>
+    <name>CLI Tests - Runtime</name>
 
     <dependencies>
         <dependency>
@@ -30,7 +30,7 @@
                             <goal>extension-descriptor</goal>
                         </goals>
                         <configuration>
-                            <deployment>${project.groupId}:${project.artifactId}-deployment:${project.version}</deployment>
+                            <deployment>${project.groupId}:cli-tests-deployment:${project.version}</deployment>
                         </configuration>
                     </execution>
                 </executions>

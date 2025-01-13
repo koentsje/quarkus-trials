@@ -4,20 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.quarkiverse.custom</groupId>
-        <artifactId>quarkus-custom-parent</artifactId>
+        <groupId>io.quarkiverse.clitest</groupId>
+        <artifactId>cli-tests-parent</artifactId>
         <version>999-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>quarkus-custom-docs</artifactId>
-    <name>Quarkus Custom - Documentation</name>
+    <artifactId>cli-tests-docs</artifactId>
+    <name>CLI Tests - Documentation</name>
 
     <dependencies>
         <!-- Make sure the doc is built after the other artifacts -->
         <dependency>
-            <groupId>io.quarkiverse.custom</groupId>
-            <artifactId>quarkus-custom-deployment</artifactId>
+            <groupId>io.quarkiverse.clitest</groupId>
+            <artifactId>cli-tests-deployment</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
