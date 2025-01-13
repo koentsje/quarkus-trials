@@ -1,11 +1,11 @@
-package io.quarkiverse.custom.deployment;
+package io.quarkiverse.clitest.deployment;
 
 import io.quarkus.deployment.annotations.BuildStep;
 import io.quarkus.deployment.builditem.FeatureBuildItem;
 
-class CustomProcessor {
+class CliTestProcessor {
 
-    private static final String FEATURE = "custom";
+    private static final String FEATURE = "cli-test";
 
     @BuildStep
     FeatureBuildItem feature() {
