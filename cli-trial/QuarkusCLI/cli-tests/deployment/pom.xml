@@ -16,6 +16,10 @@
             <artifactId>quarkus-arc-deployment</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-undertow-deployment</artifactId>
+        </dependency>
+        <dependency>
             <groupId>io.quarkiverse.clitest</groupId>
             <artifactId>cli-tests-runtime</artifactId>
             <version>${project.version}</version>
