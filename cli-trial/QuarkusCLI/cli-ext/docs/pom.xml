@@ -10,8 +10,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>cli-tests-docs</artifactId>
-    <name>CLI Tests - Documentation</name>
+    <artifactId>cli-ext-docs</artifactId>
+    <name>CLI Extension - Documentation</name>
 
     <dependencies>
         <!-- Make sure the doc is built after the other artifacts -->
