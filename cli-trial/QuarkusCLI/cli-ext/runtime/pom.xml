@@ -7,8 +7,8 @@
         <artifactId>cli-ext-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>cli-tests-runtime</artifactId>
-    <name>CLI Tests - Runtime</name>
+    <artifactId>cli-ext</artifactId>
+    <name>CLI Extension - Runtime</name>
 
     <dependencies>
         <dependency>
@@ -34,7 +34,7 @@
                             <goal>extension-descriptor</goal>
                         </goals>
                         <configuration>
-                            <deployment>${project.groupId}:cli-ext-deployment:${project.version}</deployment>
+                            <deployment>${project.groupId}:${project.artifactId}-deployment:${project.version}</deployment>
                         </configuration>
                     </execution>
                 </executions>

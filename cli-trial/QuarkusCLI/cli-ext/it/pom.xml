@@ -21,7 +21,7 @@
         </dependency>
         <dependency>
             <groupId>io.quarkiverse.clitest</groupId>
-            <artifactId>cli-tests-runtime</artifactId>
+            <artifactId>cli-ext</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
