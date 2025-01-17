@@ -11,5 +11,11 @@
     </parent>
     <artifactId>cli-ext-cli</artifactId>
     <name>CLI Extension - CLI</name>
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cli-ext</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

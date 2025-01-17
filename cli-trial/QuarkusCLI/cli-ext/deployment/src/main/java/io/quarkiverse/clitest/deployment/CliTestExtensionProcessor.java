@@ -17,7 +17,7 @@ class CliTestExtensionProcessor {
     @BuildStep
     ServletBuildItem createServlet() {
         return ServletBuildItem
-                .builder("cli-test-extension", CliTestsExtensionServlet.class.getName())
+                .builder("cli-ext", CliTestsExtensionServlet.class.getName())
                 .addMapping("/doit")
                 .build();
     }
