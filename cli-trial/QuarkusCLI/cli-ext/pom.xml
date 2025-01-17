@@ -85,7 +85,7 @@
                 </property>
             </activation>
             <modules>
-                <module>integration-tests</module>
+                <module>it</module>
             </modules>
         </profile>
     </profiles>
