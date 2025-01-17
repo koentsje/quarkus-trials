@@ -34,7 +34,7 @@
                             <goal>extension-descriptor</goal>
                         </goals>
                         <configuration>
-                            <deployment>${project.groupId}:cli-tests-deployment:${project.version}</deployment>
+                            <deployment>${project.groupId}:cli-ext-deployment:${project.version}</deployment>
                         </configuration>
                     </execution>
                 </executions>

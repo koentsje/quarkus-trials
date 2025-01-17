@@ -7,8 +7,8 @@
         <artifactId>cli-ext-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-   <artifactId>cli-tests-deployment</artifactId>
-    <name>CLI Tests - Deployment</name>
+   <artifactId>cli-ext-deployment</artifactId>
+    <name>CLI Extension - Deployment</name>
 
     <dependencies>
         <dependency>

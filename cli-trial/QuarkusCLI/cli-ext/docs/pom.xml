@@ -17,7 +17,7 @@
         <!-- Make sure the doc is built after the other artifacts -->
         <dependency>
             <groupId>io.quarkiverse.clitest</groupId>
-            <artifactId>cli-tests-deployment</artifactId>
+            <artifactId>cli-ext-deployment</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
