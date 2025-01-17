@@ -9,7 +9,7 @@
         <artifactId>cli-ext-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>cli-tests-cli</artifactId>
-    <name>CLI Tests - CLI</name>
+    <artifactId>cli-ext-cli</artifactId>
+    <name>CLI Extension - CLI</name>
 
 </project>
